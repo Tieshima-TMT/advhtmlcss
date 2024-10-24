@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSilvia Motion</title>
+<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/nwu8vau.css">
+<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/809e545258.js" crossorigin="anonymous"></script>
+<!--Bodymovin-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--Animate.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<!--jQueryUi-->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<!--Mine-->
+	<link rel="stylesheet" href="m07.css">
+</head>
+
+<body>
+	<header>
+		<img src="../images/rocket.svg" alt="Space Logo">
+		<h1>The Motion Page</h1>
+		<a class="visually-hidden" href="#main">Skip to main content</a>
+
+<nav class="topnav" id="myTopnav">
+	<a href="javascript:void(0);" class="icon" onclick="myNav()"><span class="hide">Mobile</span><i class="fa-solid fa-bars"></i>
+	  </a>
+	  <div id="myLinks">
+	<a href="/" class="active">Home</a>
+	<a href="../resume.html">Resum&#233;</a>
+	<a href="../contact.html">Contact</a>
+</div>
+  </nav>
+	</header>
+	<main id="main">
+		<section id="intro" class="inrow">
+		<div id="planetHero"></div>
+			<div id="introText">
+				<h2>Overview</h2>
+				<p>With this week&#39;s lesson, we learn how to use animation and JavaScript to add motion and interactivity to a page. This functionality can be created using CSS animations, transformations, jQuery, and even plain JavaScript. But while these can be used to create a pretty cool effects, they should be used sparingly. Having too many elements moving around can confuse your user and depending on what you are using, it can slow down your loading times. So, use your effects mindfully. The main three reasons you want to use motion are for a <b>state change</b>, for <b>emphasis</b>, and to <b>reveal</b>. For state changes, you can play small animations while something is loading or create a smooth transition when you toggle an element. To create emphasis, you can have an element shake to draw attention to it when the page loads or have elements slide in as you scroll down the page. To reveal something, you can use jQuery effects to slide visibility up and down or have information appear when you hover over an element. Below I have detailed some examples of what you can do as a developer.</p>
+			</div>
+	</section>
+	<section>
+		<div id="tabs" class="animate__animated animate__slideInUp">
+			<ul>
+			  <li><h3><a href="#tabs-1">CSS/JS Animation</a></h3></li>
+			  <li><h3><a href="#tabs-2">Mobile Friendly Menu</a></h3></li>
+			  <li><h3><a href="#tabs-3">Widget</a></h3></li>
+			  <li><h3><a href="#tabs-4">Choice: SVG Animation</a></h3></li>
+			</ul>
+			<div id="tabs-1">
+			  <p>I have used both JavaScript and CSS to create animations. The first and easiest method was using CSS to make my tabs slide up onto the screen. I found a plugin called <a href="https://animate.style/" target="_blank">Animate.css</a>. It has a library of different animations that once connected to, you just have to apply classes to the elements. I used <i>animate__slideInUp</i>. I also used JavaScript to create some of the animations. I used a jQuery effect to fade in the tabs. I initially set their opacity to 0, and as it slides in, it fades to 100% opacity.</p>
+			</div>
+			<div id="tabs-2">
+			  <p>When you are using a mobile device, a nav with a lot of links can be a problem. Yes, you can shift them to a column layout, but depending on how many links you have, it can cover the top portion of your site. This is valuable real estate because you only have a few seconds to catch a user&#39;s interest. You want to collapse your menu so you can use that portion to be eye catching. You normally do that by using a hamburger menu to hide your menu, then click on it to reveal the links when you need them. The one I use on this page is a modified version of <a href="https://www.w3schools.com/howto/howto_js_topnav_responsive.asp" target="_blank">W3 Schools&#39; Responsive Top Navigation</a>. It uses a combination of JavaScript and CSS to collapse and open the menu.</p>
+			</div>
+			<div id="tabs-3">
+			  <p>You can create almost anything if you know the right combination of JavaScript and CSS. But there is no reason to reinvent the wheel. In web design, there are a lot of different elements that are used over and over.  And while it is good to have a strong understanding of how code works, you want to work smarter not harder. An amazing resource for commonly used elements is jQuery Ui. These tabs that you are using are <a href="https://jqueryui.com/tabs/" target="_blank">jQuery Tabs</a>. I just created a link to their CSS and a couple jQuery libraries. Then I added the JavaScript and the HTML they told me to add, modified the CSS a tad, and I ended up with fully functional tabs. </p>
+			</div>
+			<div id="tabs-4">
+				<p>For my free choice, I chose to animate an SVG. <a href="https://lottiefiles.com/" target="_blank">LottieFiles</a> is a really great tool to easily add motion graphics to a page. But unfortunately, they put quite a bit of their functionality behind a pay wall. <a href="https://www.svgator.com/" target="_blank">SVGator</a> is another cool tool, but once again, paywalls, and watermarks. Luckily, after some digging, I found an awesome tool called <a href="https://exchange.adobe.com/apps/cc/12557/bodymovin" target="_blank">Bodymovin</a>. It is an extension that can be added to After Effects. I create the animation that I want to create, then Bodymovin can export it into a variety of formats, including JSON. I just add the JSON file to my images folder, then in the HTML, link to a <a href="https://cdnjs.com/libraries/bodymovin" target="_blank">Bodymovin Library</a>, add a little JavaScript, and tada, I have an animated SVG. Now the downside is I have to run my file on a local server to see the animation but that&#39;s easy enough to do with Dreamweaver&#39;s preview functionality and a Live Server Preview extension on Visual Studio Code. You can see my animation by the overview above. I made the graphics in Illustrator, animated it in After Effects, and used the Bodymovin extension to export it so I can use it in the code.</p>
+			</div>
+		  </div>
+	</section>
+	</main>
+	<footer>
+		<p>HSilvia &copy;2024</p>
+		<script src="m07-scripty.js"></script>
+	</footer>
+</body>
+</html>

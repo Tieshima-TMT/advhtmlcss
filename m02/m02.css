@@ -1,0 +1,141 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header, footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+header {
+	background: black;
+	font-size: 20px;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 4rem;
+	color: white;
+	margin-bottom: 30px;
+}
+
+h2 {
+	border-bottom: var(--dkgry) 3px double;
+}
+
+.cover {
+	height: 100vh;
+	background-image: url("../images/Space Banner-1920.png");
+	background-size: cover;
+}
+
+.visually-hidden {
+	color: white;
+}
+
+nav{
+	background: var(--accblu);
+	height: 100%;
+	padding: 20px 0;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	border-bottom: var(--mdgry) double 20px;
+}
+
+nav ul {
+	margin: 0;
+}
+
+main {
+	width: 70%;
+	margin: 20px auto;
+	flex-grow: 1;
+  	flex-shrink: 0;
+  	flex-basis: auto;
+}
+
+article {
+	margin-bottom: 3rem;
+}
+
+.card-container{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.card {
+  	width: 250px;
+  	padding: 20px;
+  	background-color: var(--accblu);
+  	border-radius: 10px;
+	margin: 10px;
+	border: 1px black solid;
+}
+
+.card img {
+  	display: block;
+  	margin: 0 auto;
+}
+
+.card h3 {
+  	margin-top: 30px;
+  	text-align: center;
+}
+
+.card h3 a {
+  	color: black;
+}
+
+.card h3 a:hover {
+  	text-decoration: none;
+}
+
+.card h4 {
+	margin: 0;
+}
+
+.card p {
+  	text-indent: 1em;
+  	text-align: justify;
+}
+
+.card ul {
+  	list-style-type: none;
+	margin: 0;
+}
+
+.card ul a:hover {
+  	color: white;
+}
+
+.col-3 {
+	column-count: 3;
+	column-gap: 50px;
+}
+
+.col-3 p {
+	margin-top: 0;
+}
+
+.wrp-demo {
+	position: relative;
+	width: 300px;
+	height: auto;
+	shape-outside: ellipse(141px 74px at 144px 98px);
+	float: right;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+footer {
+	padding-bottom: 10px;
+}

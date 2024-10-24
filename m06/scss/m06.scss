@@ -1,0 +1,209 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+h2{
+    margin: 15px;
+    border-bottom: 5px $dkgry double;
+    padding-bottom: 10px;
+}
+
+header {
+    @include row-c;
+    width: 100%;
+    margin: auto;
+    // padding: 10px;
+    background: $accblu;
+    border-bottom: 20px $mdgry double;
+
+    @include qmax($tablet-sm) {
+        @include col-c;
+    }
+
+    .logo {
+        width: 70px;
+        // margin: 5px 5px 5px auto;
+        @include margin-l(5px, auto);
+
+        @include qmax($tablet-sm){
+            margin: 10px auto 5px auto;
+        }
+    }
+
+    h1 {
+        margin: auto 40px auto 5px;
+        // padding: 20px 20px 20px 5px;
+        @include padding-l(20px, 5px);
+        @include qmax($tablet-sm) {
+            margin: auto;
+        }
+    }
+
+    nav {
+        margin: auto;
+        width: 70%;
+        font-size: 1.25rem;
+        @include qmax($tablet-sm) {
+            width: 100%;
+            margin: 0;
+        }
+        ul {
+            margin: 0 auto;
+            padding: 10px 0;
+            li {
+                margin: auto;
+                // width: (100%/3);
+            }
+        
+            a{
+                font-weight: bold;
+            }
+        
+        }
+    }
+
+    .visually-hidden:focus {
+        top: 95px;
+    }
+} //Header end
+
+body {
+    background-image: url("../images/stars.svg");
+    background-repeat: repeat;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+    "crumbs crumbs"
+    "feed side";
+    @include qmax(1040px) {
+        grid-template-columns: 100vw;
+        grid-template-rows: 50px auto auto;
+        grid-template-areas:
+        "crumbs"
+        "side"
+        "feed";
+    }
+}
+
+#crumbs {
+    grid-area: crumbs;
+
+    @include qmax($tablet-sm) {
+        p {
+            margin: auto;
+            text-align: center;
+            text-indent: 0;
+        }
+    }
+}
+
+#feed {
+    grid-area: feed;
+    min-height: 100vh;
+}
+
+aside {
+    grid-area: side;
+    border-left: 2px $accblu dashed;
+    @include qmax(1040px) {
+        border-left: none;
+        display: flex;
+        flex-direction: row;
+        @include row-left;
+
+        div nav {
+            width: 50vw;
+        }
+    }
+
+    h2 {
+        margin-bottom: 5px;
+    }
+    nav ul {
+        @include col-c;
+        margin-top: 0;
+        margin-left: 2rem;
+
+        li {
+            border-bottom: 3px $dkgry double;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
+
+article.post {
+    width: 800px;
+    border-radius: $radius;
+    background: white;
+    margin: 20px auto;
+    @include qmax($tablet-md) {
+        width: 100%;
+    }
+    header {
+        @include row-left;
+        width: 100%;
+        height: 65px;
+        border-color: white;
+        border-radius: $radius $radius 0 0;
+        @include qmax($tablet-md) {
+            display: flex;
+            flex-direction: row;
+            @include row-left;
+        }
+    }
+
+    h3+p {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    // img {
+    //     width: 50px;
+    // }
+
+    .post-info {
+        margin: auto 0;
+        .user {
+            @include margin-l(0, 10px);
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px;
+            text-indent: 0;
+            @include margin-l(0, 10px);
+        }
+    }
+
+    .post-content {
+        padding: 20px;
+    }
+
+    img {
+        // width: 80px;
+        // height: auto;
+        margin: 10px 5px 10px 30px;
+        border-radius: $radius;
+    }
+
+    .continue {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+} //Article Post END
+
+@media screen and (prefers-color-scheme: dark) {
+    @import "night";
+}

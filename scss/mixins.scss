@@ -1,0 +1,41 @@
+@mixin row-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin row-left {
+    justify-content: flex-start;
+}
+
+@mixin col-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin col-left {
+    justify-content: flex-start;
+}
+
+@mixin margin-l($all, $left) {
+    margin: $all $all $all $left;
+}
+
+@mixin margin-r($all, $right) {
+    margin: $all $right $all $all;
+}
+
+@mixin padding-l($all, $left) {
+    padding: $all $all $all $left;
+}
+
+@mixin qmax($sz) {
+    @media screen and (max-width: $sz) {
+        @content;
+    }
+}
+
+@mixin doubleBorderB($color) {
+    border-bottom: $color double 20px;
+}

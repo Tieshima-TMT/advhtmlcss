@@ -1,0 +1,191 @@
+/*Colors*/
+/*Spacing*/
+/*Sizing*/
+h2 {
+  margin: 15px;
+  border-bottom: 5px #595959 double;
+  padding-bottom: 10px; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  background: #82E3FB;
+  border-bottom: 20px #E5E5E5 double; }
+  @media screen and (max-width: 720px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
+  header .logo {
+    width: 70px;
+    margin: 5px 5px 5px auto; }
+    @media screen and (max-width: 720px) {
+      header .logo {
+        margin: 10px auto 5px auto; } }
+  header h1 {
+    margin: auto 40px auto 5px;
+    padding: 20px 20px 20px 5px; }
+    @media screen and (max-width: 720px) {
+      header h1 {
+        margin: auto; } }
+  header nav {
+    margin: auto;
+    width: 70%;
+    font-size: 1.25rem; }
+    @media screen and (max-width: 720px) {
+      header nav {
+        width: 100%;
+        margin: 0; } }
+    header nav ul {
+      margin: 0 auto;
+      padding: 10px 0; }
+      header nav ul li {
+        margin: auto; }
+      header nav ul a {
+        font-weight: bold; }
+  header .visually-hidden:focus {
+    top: 95px; }
+
+body {
+  background-image: url("../images/stars.svg");
+  background-repeat: repeat; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  grid-template-rows: 50px auto;
+  grid-template-areas: "crumbs crumbs" "feed side"; }
+  @media screen and (max-width: 1040px) {
+    main {
+      grid-template-columns: 100vw;
+      grid-template-rows: 50px auto auto;
+      grid-template-areas: "crumbs" "side" "feed"; } }
+
+#crumbs {
+  grid-area: crumbs; }
+  @media screen and (max-width: 720px) {
+    #crumbs p {
+      margin: auto;
+      text-align: center;
+      text-indent: 0; } }
+
+#feed {
+  grid-area: feed;
+  min-height: 100vh; }
+
+aside {
+  grid-area: side;
+  border-left: 2px #82E3FB dashed; }
+  @media screen and (max-width: 1040px) {
+    aside {
+      border-left: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start; }
+      aside div nav {
+        width: 50vw; } }
+  aside h2 {
+    margin-bottom: 5px; }
+  aside nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 2rem; }
+    aside nav ul li {
+      border-bottom: 3px #595959 double; }
+    aside nav ul a {
+      text-decoration: none;
+      font-weight: bold; }
+
+article.post {
+  width: 800px;
+  border-radius: 25px;
+  background: white;
+  margin: 20px auto; }
+  @media screen and (max-width: 920px) {
+    article.post {
+      width: 100%; } }
+  article.post header {
+    justify-content: flex-start;
+    width: 100%;
+    height: 65px;
+    border-color: white;
+    border-radius: 25px 25px 0 0; }
+    @media screen and (max-width: 920px) {
+      article.post header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; } }
+  article.post h3 + p {
+    margin-bottom: 0; }
+  article.post p {
+    margin: 0; }
+  article.post .post-info {
+    margin: auto 0; }
+    article.post .post-info .user {
+      margin: 0 0 0 10px;
+      font-size: 18px; }
+    article.post .post-info p {
+      font-size: 16px;
+      text-indent: 0;
+      margin: 0 0 0 10px; }
+  article.post .post-content {
+    padding: 20px; }
+  article.post img {
+    margin: 10px 5px 10px 30px;
+    border-radius: 25px; }
+  article.post .continue {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none; }
+
+@media screen and (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6 {
+    color: #82E3FB; }
+
+  h2 {
+    border-color: white;
+    background: #262626; }
+
+  body {
+    background: #262626;
+    background-image: url("../images/stars.svg");
+    background-repeat: repeat;
+    color: white; }
+
+  header {
+    background: black;
+    border-color: #262626; }
+    header svg #f.p, header svg circle.p {
+      fill: white; }
+    header svg .p, header svg .q {
+      fill: #595959; }
+    header svg .s {
+      fill: #82E3FB; }
+    header svg .r {
+      fill: #E5E5E5; }
+
+  aside nav ul li {
+    border-color: white;
+    background-color: #262626; }
+
+  footer {
+    border-color: #262626;
+    background: black;
+    color: white; }
+
+  a {
+    color: #82E3FB; }
+    a:hover {
+      color: white; }
+
+  article.post, article.post-l {
+    background: #595959; }
+    article.post header, article.post-l header {
+      border-color: #595959; } }

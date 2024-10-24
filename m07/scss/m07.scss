@@ -1,0 +1,148 @@
+@import "../../scss/variables.scss";
+@import "../../scss/base-min.scss";
+@import "../../scss/mixins.scss";
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+  	flex-shrink: 0;
+  	flex-basis: auto;
+    padding-bottom: $defpad;
+}
+
+header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  
+	/* To make skip links visible on focus */
+	&:focus {
+	  clip: auto;
+	  height: auto;
+	  margin: 0;
+	  overflow: visible;
+	  position: absolute;
+	  width: auto;
+	  /* Adjust the remaining properties to match design */
+	  outline: none;
+	  top: 80px;
+	  left: 20px;
+	}
+  }
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background: $accblu;
+    @include doubleBorderB($mdgry);
+    @include qmax($tablet-sm) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    img {
+        width: 50px;
+        padding: 10px 10px 0;
+    }
+
+    h1 {
+        @include margin-l(auto, 10px);
+
+        @include qmax($tablet-sm) {
+            margin: 0;
+            padding: 5px 5px 0;
+            line-height: 2.5rem;
+        }
+    }
+
+    nav {
+        margin-right: 3rem;
+        @include qmax($tablet-sm) {
+            margin: 0;
+        }
+    }
+}
+
+#intro.inrow {
+	justify-content: center;
+	
+	#introText {
+		// margin: auto 30px auto 10px;
+		max-width: 700px;
+        padding: 20px;
+        @include margin-l(auto, 20px);
+        // margin: auto;
+        @include qmax(1360px) {
+            margin: auto;
+        }
+	}
+
+    @include qmax($tablet-md) {
+        flex-direction: column;
+        justify-content: center;
+        // margin: 10px;
+        margin: auto;
+    }
+
+    @include qmax($tablet-sm) {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#planetHero {
+    max-width: 600px;
+    @include margin-r(auto, 0);
+    @include qmax(1360px) {
+        margin: auto;
+    }
+    @include qmax($tablet-md) {
+        max-width: 550px;
+        // margin: auto;
+    }
+}
+
+#tabs {
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;
+    box-shadow: -5px 10px 5px darken($mdgry, 20);
+}
+.ui-tabs .ui-state-active {
+    background: $accblu;
+    border-color: darken($accblu, 25);
+    a {
+        color: $blk;
+    }
+}
+
+.ui-widget-header {
+    background: $mdgry;
+
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.ui-widget-content {
+    color: $dkgry;
+}
+

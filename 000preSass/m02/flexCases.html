@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HS Flexible Cases</title>
+	<link rel="stylesheet" href="https://use.typekit.net/nwu8vau.css">
+	<link rel="stylesheet" href="../baseStyles.css">
+	<link rel="stylesheet" href="m02.css">
+</head>
+
+<body>
+	<header class="cover incol">
+		<a class="visually-hidden" href="#full">Skip to main content</a>
+		<h1>Flexible Cases</h1>
+			<article role="navigation" aria-label="Table of Contents" class="inrow">
+				<a class="nounder btn lite" href="#full">Full-Size Header</a>
+				<a aria-label="Flexbox Navigation" class="nounder btn lite" href="#flex-nav">Flexbox Nav</a>
+				<a class="nounder btn lite" href="#sticky">Sticky Header/Footer</a>
+				<a class="nounder btn lite" href="#cards">Cards</a>
+				<a class="nounder btn lite" href="#multicol">Multicolumn Layout</a>
+				<a class="nounder btn lite" href="#textwrp">Fancy Text Wrap</a>
+			</article>
+	</header>
+	<nav aria-label="Primary">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="../resume.html">Resum&#233;</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	<main>
+		<article>
+			<div class="anchor" id="full"></div>
+		<h2>Full-Size Header</h2>
+			<p>You saw this when you opened the page. These kinds of headers are used to catch people's attention with large hero images. A lot of the time, these are applied to sites that want to bring attention to a specific service or part of the site, like a sale or an upcoming event or a contact page.</p>
+			<p>I did this by making the height the same as the viewport height. Then I applied my image as a background. I also had to adjust the size of the background.</p>
+		</article>
+		<article>
+			<div class="anchor" id="flex-nav"></div>
+		<h2>Flexbox Nav</h2>
+			<p>On the landing page, I have adjusted the navigation so it is in a flexbox. I have done the same to the buttons and nav at the top of this page. Using flexboxes, makes elements more flexible. It makes it easy to throw things into a row or a column and you can add properties that allow elements to wrap when the screen shrinks.</p>
+		</article>
+		<article>
+			<div class="anchor" id="sticky"></div>
+		<h2>Sticky Header/Footer</h2>
+			<p>I have applied both a sticky header and a sticky footer to this page. You should be able to see the nav at the top of the screen but you’ll find the footer all the way at the bottom.</p>
+			<div class="indent">
+				<h3>Sticky Header</h3>
+				<p>I set the position to sticky and told the CSS when the position hits zero, it’ll stay there. I had to move the nav outside of the header to make this work because of how I made the full-sized header. It was preventing the nav from hitting the 0 position.</p>
+				<h3>Sticky Footer</h3>
+				<p>Even though this is called a sticky footer, you don’t make this by setting the position to sticky. This type of footer is also sometimes confused with a fixed footer. A fixed footer stays in one spot on the screen while a sticky footer, sticks to the bottom of the screen when you reach the end of the content. There are a plethora of ways to do this. I did this by making the body a flexbox and changing the proportions.</p>
+			</div>
+		</article>
+		<article>
+			<div class="anchor" id="cards"></div>
+		<h2>Cards</h2>
+			<p>Cards are used to display related content together. A lot of the time they are used when you need to display a group of information in a grid layout like a products page or employee directory. Below is my example made from a flexbox.</p>
+			<div class="card-container indent">
+				<div class="card">
+					<img src="https://placehold.co/150" alt="">
+					<h3><a href="#">Title 01</a></h3>
+					<p>Nullam fermentum metus vitae elit mollis, hendrerit iaculis dui volutpat. Aliquam maximus pretium posuere.</p>
+					<h4>Sub Title</h4>
+					<ul>
+						<li><a href="#" target="_blank">Link 1</a></li>
+						<li><a href="#" target="_blank">Link 2</a></li>
+					</ul>
+				</div><!--Card 01-->
+				<div class="card">
+					<img src="https://placehold.co/150" alt="">
+					<h3><a href="#">Title 02</a></h3>
+					<p>Nullam fermentum metus vitae elit mollis, hendrerit iaculis dui volutpat. Aliquam maximus pretium posuere.</p>
+					<h4>Sub Title</h4>
+					<ul>
+						<li><a href="#" target="_blank">Link 1</a></li>
+						<li><a href="#" target="_blank">Link 2</a></li>
+					</ul>
+				</div><!--Card 02-->
+				<div class="card">
+					<img src="https://placehold.co/150" alt="">
+					<h3><a href="#">Title 03</a></h3>
+					<p>Nullam fermentum metus vitae elit mollis, hendrerit iaculis dui volutpat. Aliquam maximus pretium posuere.</p>
+					<h4>Sub Title</h4>
+					<ul>
+						<li><a href="#" target="_blank">Link 1</a></li>
+						<li><a href="#" target="_blank">Link 2</a></li>
+					</ul>
+				</div><!--Card 03-->
+				<div class="card">
+					<img src="https://placehold.co/150" alt="">
+					<h3><a href="#">Title 04</a></h3>
+					<p>Nullam fermentum metus vitae elit mollis, hendrerit iaculis dui volutpat. Aliquam maximus pretium posuere.</p>
+					<h4>Sub Title</h4>
+					<ul>
+						<li><a href="#" target="_blank">Link 1</a></li>
+						<li><a href="#" target="_blank">Link 2</a></li>
+					</ul>
+				</div><!--Card 04-->
+			</div> <!--Card containter-->
+		</article>
+		<article>
+			<div class="anchor" id="multicol"></div>
+		<h2>Multicolumn Layout</h2>
+			<div class="col-3">
+			<p>Separating text into columns is super easy with CSS. All you need to do is apply column-count to a container. You can use column-gap to control the space between columns. All the text after this is gibberish to show off the property.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue nisi non urna rutrum accumsan a et magna. Donec sit amet est ut tortor tristique euismod. Nulla facilisi. Vestibulum sem nibh, mattis vel sem et, elementum eleifend odio. Vestibulum id ornare orci. Aliquam malesuada quam urna, quis pellentesque est gravida in. Aliquam varius lectus nisl, vel pellentesque ante egestas non. Maecenas fermentum bibendum odio, at porttitor purus dictum faucibus. Nullam sapien felis, eleifend eget libero facilisis, tincidunt accumsan erat. Ut in egestas lorem. Ut diam orci, ultricies a magna a, sollicitudin rhoncus orci. Suspendisse mollis malesuada sodales. Ut non justo mattis, pellentesque quam a, eleifend dolor. Aliquam a ultrices eros.</p>
+			<p>Nullam fermentum metus vitae elit mollis, hendrerit iaculis dui volutpat. Aliquam maximus pretium posuere. Mauris malesuada vehicula nibh, vel tempus sapien porttitor at. Nulla facilisis sodales aliquam. In hac habitasse platea dictumst. Nulla in mi sed ipsum efficitur facilisis. Quisque maximus, quam sodales gravida consequat, velit nunc volutpat eros, ut egestas tellus metus id tellus.</p>
+			<p>Nulla eget tortor non ipsum finibus ultricies non quis mauris. Suspendisse ut risus venenatis, iaculis ex eget, ultricies nisl. Ut cursus auctor augue a feugiat. Integer aliquam arcu et risus blandit vehicula. Pellentesque ac eleifend dui. Duis ut ex lacus. Pellentesque maximus magna sit amet nisi tempus facilisis.</p>
+			</div>
+		</article>
+		<article>
+			<div class="anchor" id="textwrp"></div>
+		<h2>Fancy Text Wrap</h2>
+			<p>Wrapping text around images is also a simple task. You just have to combine floats with shape-outside properties. Sometimes clip-paths can be useful as well. You can wrap around geometric shapes or irregular shapes. This is laid out in chapter 15 of the textbook. Flip to that chapter if you need a review of how these work. All the text after this is gibberish to show off the property. </p>
+			<img class="wrp-demo" src="../images/planetsRingLine.png" alt="">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue nisi non urna rutrum accumsan a et magna. Donec sit amet est ut tortor tristique euismod. Nulla facilisi. Vestibulum sem nibh, mattis vel sem et, elementum eleifend odio. Vestibulum id ornare orci. Aliquam malesuada quam urna, quis pellentesque est gravida in. Aliquam varius lectus nisl, vel pellentesque ante egestas non. Maecenas fermentum bibendum odio, at porttitor purus dictum faucibus. Nullam sapien felis, eleifend eget libero facilisis, tincidunt accumsan erat. Ut in egestas lorem. Ut diam orci, ultricies a magna a, sollicitudin rhoncus orci. Suspendisse mollis malesuada sodales. Ut non justo mattis, pellentesque quam a, eleifend dolor. Aliquam a ultrices eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue nisi non urna rutrum accumsan a et magna. Donec sit amet est ut tortor tristique euismod. Nulla facilisi. Vestibulum sem nibh, mattis vel sem et, elementum eleifend odio. Vestibulum id ornare orci. Aliquam malesuada quam urna, quis pellentesque est gravida in. Aliquam varius lectus nisl, vel pellentesque ante egestas non. Maecenas fermentum bibendum odio, at porttitor purus dictum faucibus. Nullam sapien felis, eleifend eget libero facilisis, tincidunt accumsan erat. Ut in egestas lorem. Ut diam orci, ultricies a magna a, sollicitudin rhoncus orci. Suspendisse mollis malesuada sodales. Ut non justo mattis, pellentesque quam a, eleifend dolor. Aliquam a ultrices eros.</p>
+		</article>
+	</main>
+	<footer>
+		<p>HSilvia &copy;2024</p>
+	</footer>
+</body>
+</html>

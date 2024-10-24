@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Butler CC Style Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Code Highlighter-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+	<!--Mine-->
+	<link rel="stylesheet" href="patt_style.css">
+</head>
+
+<body>
+	<div id="container">
+	<header class="page-header">
+		<div id="branding">
+		<h1>Butler CC Web Dev Pattern Library</h1>
+		<p>This is a short and far from complete example of what the pattern library assignment can look like. You can see a more complete example at <b><a href="https://a11y-style-guide.com/style-guide/" target="_blank">A11Y Style Guide</a></b>.</p>
+		</div>
+	</header>
+	<aside>
+		<h2>Contents</h2>
+		<ul>
+			<li><a href="#Colors">Colors</a></li>
+			<li><a href="#Typography">Typography</a></li>
+			<li><a href="#Navigation">Navigation</a></li>
+		</ul>
+	</aside>
+	<main>
+		<p><a href="/">Home</a> &gt; Pattern Library</p>
+		<h2>Colors</h2>
+		<div id="Colors" class="colors">
+			<div class="inline">
+				<div class="color-main"></div>
+				<p>Main: &#35;43125F</p>
+			</div>
+			<div class="inline">
+				<div class="color-text"></div>
+				<p>Text: &#35;444</p>
+			</div>
+			<div class="inline">
+				<div class="color-ltgry"></div>
+				<p>Light Grey: &#35;e0e0e0</p>
+			</div>
+		</div>
+		<h2 id="Typography">Typography</h2>
+		<h3>The Global Properties</h3>
+		<p>Apply these properties to the body so they are global:</p>
+		<div class="codeSnip">
+			<h3>The CSS:</h3>
+			<pre><code>body &#123;
+	color: #444;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+&#125;</code></pre>
+		</div>
+		
+		<h2>Page Titles</h2>
+		<p>Headings 1-4 will share these properties:</p>
+		<div class="codeSnip">
+		<h3>The CSS</h3>
+		<pre><code>h1, h2, h3, h4 {
+	margin-bottom: .25em;
+	margin-top: 1em;
+}</code></pre></div>
+		
+		<p>The site header will use h1. All individual page titles will use h2.</p>
+		<div class="codeSnip">
+			<h3>The CSS for h1 in the Header</h3>
+			<pre><code>header&gt;h1 {
+	margin-top: 0;
+	font-size: 1.8em;
+}</code></pre>
+		<h3>The CSS for h1/h2</h3>
+		<pre><code>h1, h2 {
+	color: #43125F;
+	font-size: 2em;
+}</code></pre>
+		</div>
+		
+		<h3>Categories</h3>
+		<div class="codeSnip">
+		<h3>The CSS</h3>
+		<pre><code>h3 {
+	font-size: 1.5em;
+}</code></pre>
+		</div>
+		
+		<h4>Sub Categories</h4>
+		<div class="codeSnip">
+		<h3>The CSS</h3>
+		<pre><code>h4 {
+font-size: 1.125em;
+}
+</code></pre></div>
+		
+		<a href="">Links</a>
+		<div class="codeSnip">
+		<h3>The CSS</h3>
+		<pre><code>a, a:link, a:visited {
+	color: #43125F;
+}</code></pre>
+			</div>
+		
+		<h2 id="Navigation">Navigation</h2>
+		<p>The primary form of navigation is breadcrumbs.</p>
+		<p><a href="#">Home</a> &gt; <a href="#">Tutorials and Resources</a> &gt; Page Title</p>
+		<div class="codeSnip">
+		<h3>The HTML</h3>
+		<pre><code>&lt;p&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &amp;gt; &lt;a href="#"&gt;Tutorials and Resources&lt;/a&gt; &amp;gt; Page Title &lt;/p&gt;</code></pre>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<p><a href="https://www.butlercc.edu/"><img src="img/Butler_Horiz_206a.png" width="206" height="64" alt="Butler Community College"></a></p>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+	</footer>
+	</div>
+</body>
+</html>

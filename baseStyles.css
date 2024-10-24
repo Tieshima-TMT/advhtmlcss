@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+:root {
+/*Colors*/
+	--dkgry: #595959;
+	--mdgry: #E5E5E5;
+	--accblu: #82E3FB;
+/*Spacing*/
+	--defpad: 15px;
+	--radius: 25px;
+}
+
+body {
+	margin: 0;
+	background: var(--mdgry);
+	font-family: aglet-sans, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.75rem;
+	color: var(--dkgry);
+}
+
+nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li {
+	padding: 0 5px;
+}
+
+/* To visually hide the link */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* To make skip links visible on focus */
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  /* Adjust the remaining properties to match design */
+  outline: none;
+  top: 20px;
+  left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 10px;
+	font-family: balboa, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: black;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+h3 {
+	margin-bottom: 0.25rem;
+}
+
+h3+p {
+	margin-top: 0.25rem;
+}
+
+p {
+	text-indent: 2em;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: var(--dkgry);
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+	margin-bottom: 2rem;
+}
+
+code {
+  border: 5px #82e3fb solid;
+  border-radius: var(--radius);
+}
+
+pre code.hljs, code.hljs {
+  padding: 10px;
+}
+
+.hljs-selector-tag {
+	color: cyan;
+}
+
+.hljs-attribute {
+	color: #C98BFB;
+}
+
+.hljs-string, .hljs-number {
+	color: #EF9D21;
+}
+
+footer {
+	padding: 10px 15px 10px 0;
+	text-align: right;
+	background: var(--accblu);
+	color: black;
+	border-top: var(--mdgry) 20px double;
+}
+
+footer p {
+	margin: 0;
+}
+
+.nounder {
+	text-decoration: none;
+}
+
+.inrow {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+}
+
+.cnt {
+	justify-content: center;
+}
+
+.incol {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+.incol figcaption {
+	max-width: 600px;
+	padding: 0 3px;
+	font-size: 1rem;
+	margin: 0 auto;
+	color: black;
+}
+
+.incol img {
+	margin: 5px auto;
+	padding: 5px;
+}
+
+.rgt {
+	display: block;
+	margin: 1em;
+	text-align: right;
+}
+
+.feat-cnt {
+	width: auto;
+	height: auto;
+	min-width: 100px;
+	max-width: 100%;
+	margin-bottom: 3rem;
+}
+
+.blu-box{
+	padding: var(--defpad);
+	border: 5px var(--accblu) solid;
+	border-radius: var(--radius);
+	background:#DAF6FD; 
+}
+
+.indent {
+	margin-left: 4rem;
+}
+
+.btn {
+	text-align: center;
+	background: black;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.btn:hover {
+	background: var(--accblu);
+	color: black;
+}
+
+.lite {
+	background: var(--accblu);
+	color: black;
+}
+
+.lite:hover {
+	background: var(--mdgry);
+}

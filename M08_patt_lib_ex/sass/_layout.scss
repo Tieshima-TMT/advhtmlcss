@@ -1,0 +1,52 @@
+body {
+	background-color: #fff;
+	color: $text;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+
+#container {
+    display: grid;
+    grid-template: auto 1fr 200px / auto 1fr;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer';
+}
+
+/* Newest CLEARFIX http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix:after, .group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page-header {
+    border-bottom: 3px solid #43125F;
+    grid-area: header;
+}
+
+aside {
+    // float: left;
+    grid-area: aside;
+    padding: 20px;
+}
+
+main {
+    max-width: 60em;
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: main;
+}
+
+.page-footer {
+	margin-top: 1em;
+	text-align: center;
+    grid-area: footer;
+    border-top: 3px solid #43125F;
+
+    img {
+        border: none;
+    }
+}

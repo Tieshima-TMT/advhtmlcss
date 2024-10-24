@@ -1,0 +1,9 @@
+@mixin no-bull {
+    list-style-type: none;
+}
+
+@mixin swatch-sm($clr) {
+  width: 100px;
+  height: 20px;
+  background: $clr;
+}
