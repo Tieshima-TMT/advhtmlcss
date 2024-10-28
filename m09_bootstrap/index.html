@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HS Bootstrap Page</title>
+<link rel="icon" type="image/x-icon" href="../images/rocket.svg">
+<link rel="stylesheet" href="https://use.typekit.net/nwu8vau.css">
+	<link rel="stylesheet" href="bootstrap-4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header class="container-fluid p-0">
+		<a class="visually-hidden" href="#main">Skip to main content</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+		<a class="navbar-brand" href="/"><img src="../images/rocket.svg" alt="Link to home"></a>
+		<h1 class="mt-1 mr-auto">Bootstrap Page</h1>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="../resume.html">Resum&#233;</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="../contact.html">Contact</a>
+			  </li>
+		  </ul>
+		</div>
+	  </nav><!--NAV END-->
+	</header>
+	<main id="main" class="container-fluid mt-4 p-0">
+		<div class="row col-11 mx-auto">
+		<div class="jumbotron">
+			<h2 class="display-4">Bootstrap Magic</h2>
+			<p class="lead">Bootstrap can be a very handy tool. It makes it easy to quickly create layouts and the grid system is handy for creating flexible layouts. Rather than spending time, developing components from the ground up like this jumbotron, I can just use the code available from Bootstrap’s documentation.</p>
+			<hr class="my-4">
+			<p>This page was created using Bootstrap 4.6.1.</p>
+			<a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" role="button">Bootstrap 4 Doc</a>
+		  </div>
+		</div>
+		<div class="container-fluid col-12 p-0">
+		<h2 class="bg-primary px-5 py-3 m-0 mb-3">Components</h2><!--COMPONENTS HEADING-->
+		</div>
+		<div class="row"><!--Jumbotron-->
+			<div class="container col-4">
+				<h3>Jumbotron</h3>
+				<p class="no-indent"><span class="badge badge-pill badge-primary">Jumbotron</span></p>
+				<p>This is a flexible component meant to act as a hero unit. It&#39;s good for bringing attention to certain aspects of a site like a promotion. You can see an example of how it is used above.</p>
+			</div><!--Description END-->
+			<div class="container col-6"><!--Jumbotron CODE-->
+				<h4>The Code</h4>
+<pre><code>&lt;div class="jumbotron"&gt;
+	&lt;h1 class="display-4"&gt;Hello, world!&lt;/h1&gt;
+	&lt;p class="lead"&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;
+	&lt;hr class="my-4"&gt;
+	&lt;p&gt;It uses utility classes for typography and spacing to space content out within the larger container.&lt;/p&gt;
+	&lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+			</div><!--Code END-->
+		</div><!--Jumbotron END-->
+		<div class="row"><!--Buttons START-->
+			<div class="container col-5">
+				<h3>Buttons</h3>
+				<p class="no-indent"><span class="badge badge-pill badge-primary">Buttons</span><span class="badge badge-pill badge-info">Large Button</span></p>
+				<p>Bootstrap offers a wide library of button styles that can be used for many different purposes. The buttons can be easily customized using the bootstrap color system. There is an example of a large button in the jumbotron above. It takes you to the Bootstrap 4 documentation.</p>
+			</div><!--Button description-->
+			<div class="container-fluid col-6 my-auto">
+				<h4>The Code</h4>
+<pre><code>&lt;button type="button" class="btn btn-primary btn-lg"&gt;Large button&lt;/button&gt;</code></pre>
+			</div>
+		</div>
+		<div class="row"><!--Badges-->
+			<div class="container col-6">
+				<h3>Badges</h3>
+				<p class="no-indent"><span class="badge badge-pill badge-primary">Badge</span> <span class="badge badge-pill badge-info">Pill badges</span></p>
+				<p>Badges are small labels that can be added to elements. These can be used to indicate notifications, to indicate a product is new, etc. I am using the pill version of the badges to indicate what component and what version of the component I am using. You can see examples underneath each of the component names in this section.</p>
+			</div><!--Description END-->
+			<div class="container col-5"><!--Badge CODE-->
+				<h4>The Code</h4>
+<pre><code>&lt;span class="badge badge-pill badge-primary"&gt;Badge Text&lt;/span&gt;</code></pre>
+			</div><!--Code END-->
+		</div><!--Badge END-->
+		<div class="row mt-5"><!--Carousel Ex/Text-->
+			<div class="container-fluid col-7 mr-1 my-auto"><!--Carousel-->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+				  </ol>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					  <img src="../images/mountain-7690893_1280.jpg" class="d-block w-100" alt="Overlooking a lake at dusk">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/milky-way-4526277_1280.jpg" class="d-block w-100" alt="Overlooking a field of lavender with a starry sky">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/galaxy-11098_1280.jpg" class="d-block w-100" alt="A galaxy with a red nebula">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/milky-way-67504_1280.jpg" class="d-block w-100" alt="The milky way stretching across the sky">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/ocean-922943_1280.jpg" class="d-block w-100" alt="A dark ocean with yellow clouds">
+				  </div>
+				</div>
+			  </div>
+			</div><!--Carousel END-->
+			<div class="container-fluid col-4 ml-0"><!--Carousel TEXT-->
+				<h3>Slide Show</h3>
+				<p class="no-indent"><span class="badge badge-pill badge-primary">Carousel</span> <span class="badge badge-pill badge-info">Indicators</span></p>
+				<p>These are sometimes referred to as sliders. When you want to showcase a group of images, you can use this component. You can resize it so it becomes a full size header. Or you can use smaller sizes like I have done to the left. You can also customize what controls are visible on the carousel. Right now, I have the indicators visible. You can also toggle the arrows on or none of the above.</p>
+			</div><!--Carousel TEXT END-->
+		</div><!--Row END-->
+		<div class="container col-10 mt-4"><!--Carousel CODE-->
+			<h4>The Code</h4>
+<pre class="mb-0"><code>&lt;div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"&gt;
+	&lt;ol class="carousel-indicators"&gt;
+		&lt;li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+		&lt;li data-target="#carouselExampleIndicators" data-slide-to="1"&gt;&lt;/li&gt;
+		&lt;li data-target="#carouselExampleIndicators" data-slide-to="2"&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;div class="carousel-inner"&gt;
+		&lt;div class="carousel-item active"&gt;
+			&lt;img src="..." class="d-block w-100" alt="..."&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item"&gt;
+			&lt;img src="..." class="d-block w-100" alt="..."&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item"&gt;
+			&lt;img src="..." class="d-block w-100" alt="..."&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		</div><!--Carousel Code END-->
+		<h3 class="mt-4 ml-4">Tab List Group</h3><!--Tab List START-->
+		<p class="no-indent ml-4"><span class="badge badge-pill badge-primary">List-Group</span> <span class="badge badge-pill badge-info">JavaScript Behavior</span></p>
+		<div class="row mt-3 col-11 mx-auto">
+			<div class="col-4 mx-auto">
+			  <div class="list-group" id="list-tab" role="tablist">
+				<a class="list-group-item list-group-item-action active" id="list-desc-list" data-toggle="list" href="#list-desc" role="tab" aria-controls="description">Description</a><!--The End Tab-->
+				<a class="list-group-item list-group-item-action" id="list-code-list" data-toggle="list" href="#list-code" role="tab" aria-controls="code">The Code</a><!--The Code Tab-->
+			  </div>
+			</div><!--Left panel END-->
+			<div class="col-8">
+			  <div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="list-desc" role="tabpanel" aria-labelledby="list-desc-list">
+					<p>This component is handy for displaying a lot of information without taking up a lot of space. JavaScript is used to create the functionality of this component. When you click on a list item, it switches the items displayed on the right.</p>
+				</div><!--Tab Description END-->
+				<div class="tab-pane fade" id="list-code" role="tabpanel" aria-labelledby="list-code-list">
+<pre><code>&lt;div class="row"&gt;
+	&lt;div class="col-4"&gt;
+	  &lt;div class="list-group" id="list-tab" role="tablist"&gt;
+		&lt;a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"&gt;Home&lt;/a&gt;
+		&lt;a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"&gt;Profile&lt;/a&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="col-8"&gt;
+	  &lt;div class="tab-content" id="nav-tabContent"&gt;
+		&lt;div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"&gt;...&lt;/div&gt;
+		&lt;div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"&gt;...&lt;/div&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+				</div><!--Tab Code END-->
+			  </div>
+			</div><!--Right panel END-->
+		  </div><!--Tab list END-->
+	</main>
+	<footer class="container-fluid bg-secondary text-light mt-5">
+		<p>&copy; H Silvia</p>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</body>
+</html>

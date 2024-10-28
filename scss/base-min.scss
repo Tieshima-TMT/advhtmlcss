@@ -158,8 +158,8 @@ pre code.hljs, code.hljs {
   padding: 10px;
 }
 
-.hljs-selector-tag {
-	color: cyan;
+.hljs-selector-tag, .hljs-name {
+	color: $accblu;
 }
 
 .hljs-attribute {
@@ -167,7 +167,7 @@ pre code.hljs, code.hljs {
 }
 
 .hljs-string, .hljs-number {
-	color: #EF9D21;
+	color: #9BD1A7;
 }
 
 footer {

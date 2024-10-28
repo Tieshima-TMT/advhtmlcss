@@ -1,0 +1,57 @@
+@import "../scss/base-min.scss";
+
+header {
+	@include doubleBorderB($accblu);
+}
+
+// SMALL HEADERS
+/* To visually hide the link */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  
+	/* To make skip links visible on focus */
+	&:focus {
+	  clip: auto;
+	  height: auto;
+	  margin: 0;
+	  overflow: visible;
+	  position: absolute;
+	  width: auto;
+	  /* Adjust the remaining properties to match design */
+	  outline: none;
+	  top: 55px;
+	  left: 100px;
+	  z-index: 99;
+	}
+  }
+
+  nav {
+	z-index: 1;
+  }
+
+nav a img {
+    width: 50px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+	justify-content: flex-end;
+}
+
+.nav-link {
+	text-decoration: underline;
+}
+
+.row {
+	margin: 0;
+}
+
+.no-indent {
+	text-indent: 0;
+}
