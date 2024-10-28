@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git and GitHub</title>
+<link rel="icon" type="image/x-icon" href="../images/HS.svg">
+<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/nwu8vau.css">
+<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/809e545258.js" crossorigin="anonymous"></script>
+<!--jQuery/highlight.js-->
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+<!--Mine-->
+	<link rel="stylesheet" href="m010.css">
+</head>
+
+<body>
+	<header>
+		<img src="../images/rocket.svg" alt="Space Logo">
+		<h1>Git and GitHub</h1>
+		<a class="visually-hidden" href="#main">Skip to main content</a>
+
+<nav class="topnav" id="myTopnav">
+	<a href="javascript:void(0);" class="icon" onclick="myNav()"><span class="hide">Mobile</span><i class="fa-solid fa-bars"></i>
+	  </a>
+	  <div id="myLinks">
+	<a href="/" class="active">Home</a>
+	<a href="../resume.html">Resum&#233;</a>
+	<a href="../contact.html">Contact</a>
+</div>
+  </nav>
+	</header>
+	<main id="main">
+		<section>
+			<h2>What is Git?</h2>
+			<p>Git is a popular version control system. It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then. It is popular for collaborating on projects with multiple people. Git is able to both tracking code changes and tracking who made changes. It also allows you to revert your project to an earlier version if mistakes are made. Git used used by most developers/development studios.</p>
+			<h3>Git != GitHub</h3>
+			<p>Git is not the same as GitHub. GitHub make tools that use Git and allows developers to create, store, manage and share their code. It is currently the largest host of source code in the world.</p>
+			<h2>How to use Git</h2>
+			<p>First you need to download git to your machine. You can download it at <a href="https://git-scm.com/downloads" target="_blank">git-scm.com</a>. Then you operate Git through the command prompt window on your machine. When working with projects, they going through the following stages:</p>
+			<ul>
+				<li>Initialize git in the project folder</li>
+				<li>Select the branch you want to work in. At the start, you will be in master.</li>
+				<li>Make whatever edits you need to the files.</li>
+				<li>Stage the files.</li>
+				<li>Commit the changes, noting what you modified.</li>
+				<li>Then you can push the files back to where the source project is. Often this will be to GitHub.</li>
+				<li>Rinse, lather, repeat</li>
+			</ul>
+			<p>A cheat sheet of your most common commands can be found in the <a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">Git Cheat Sheet from GitHub</a> or in <a href="https://www.geeksforgeeks.org/useful-github-commands/" target="_blank">List of Useful Git Commands from GeeksforGeeks</a>.</p>
+		</section>
+		<section>
+			<h2>Setup</h2>
+			<p>First thing I did was create a repository with GitHub called <a href="https://github.com/Tieshima-TMT/advhtmlcss.git">advhtmlcss</a>. Before I setup a connection with Git, I added a file called <span class="digital">.gitignore</span>. This is because I have quite a few support files and older versions of the site saved in my project folder that I don&#39;t want uploaded to my repository. <span class="digital">.gitignore</span> will tell Git which ones it should ignore. This file is formatted like this:</p>
+<pre class="snippet"><code>000preaccess
+000preSass
+0000start
+prepros.config
+M08_patt_lib_ex/prepros.config</code></pre>
+			<h2>Initial Upload</h2>
+			<p>Once that was set up, I opened up my command prompt window and changed the directory to the folder with my files. I did this with the <span class="digital">cd</span> command followed by the filepath to the folder.</p>
+			<p>Then I initialized Git in the folder with:</p>
+<pre class="snippet"><code>&gt;git init</code></pre>
+			<p>From here I checked the status of my repository with:</p>
+<pre class="snippet"><code>&gt;git status</code></pre>
+			<p>The command prompt tells me that I still need to add all my files so they can be committed. I add them, then commit them with a message to mark the commit as the initial release.</p>
+<pre class="snippet"><code>&gt;git add --a
+&gt;git commit -m “First release”</code></pre>
+			<p>Once everything was committed, I set up the connection to my GitHub repository. The second command pushes the files.</p>
+<pre class="snippet-lng"><code>&gt;git remote add origin https://github.com/Tieshima-TMT/advhtmlcss.git
+&gt;git push --all origin</code></pre>
+			<h2>Changes</h2>
+			<p>After my initial upload I made some changes to the site. Primarily adding the M08 and M09 project examples. Since git was already tracking the folder, I made my changes then added the changes to the staging environment. After that, I committed the changes and pushed the new files to the GitHub repository.</p>
+<pre class="snippet-lng"><code>git add --a
+git commit -m “Update with M08 and M09 with gitignore update”
+git push --all origin</code></pre>
+			<h2>The Repository</h2>
+			<p><a class="social" href="https://github.com/Tieshima-TMT/advhtmlcss.git"><i class="fa-brands fa-square-github"></i> Tieshima-TMT: advhtmlcss</a></p>
+		</section>
+	</main>
+	<footer>
+		<p>HSilvia &copy;2024</p>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+		<script src="../scripty.js"></script>
+</body>
+</html>

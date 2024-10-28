@@ -1,0 +1,119 @@
+@import "../../scss/base-min.scss";
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+  	flex-shrink: 0;
+  	flex-basis: auto;
+    padding-bottom: $defpad;
+    padding: 0 100px;
+
+    @include qmax($tablet-md) {
+        padding: 0 $defpad;
+    }
+}
+
+header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+  
+	/* To make skip links visible on focus */
+	&:focus {
+	  clip: auto;
+	  height: auto;
+	  margin: 0;
+	  overflow: visible;
+	  position: absolute;
+	  width: auto;
+	  /* Adjust the remaining properties to match design */
+	  outline: none;
+	  top: 20px;
+	  left: 280px;
+	}
+  }
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background: $accblu;
+    @include doubleBorderB($mdgry);
+    @include qmax($tablet-sm) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    img {
+        width: 50px;
+        padding: 10px 10px 0;
+    }
+
+    h1 {
+        @include margin-l(auto, 10px);
+
+        @include qmax($tablet-sm) {
+            margin: 0;
+            padding: 5px 5px 0;
+            line-height: 2.5rem;
+        }
+    }
+
+    nav {
+        margin-right: 3rem;
+        @include qmax($tablet-sm) {
+            margin: 0;
+        }
+    }
+}
+
+section {
+    margin-bottom: $defpad*2;
+}
+
+.snippet {
+    max-width: 500px;
+    margin: auto;
+}
+
+.snippet-lng {
+    max-width: 750px;
+    margin: auto;
+}
+
+.hljs-comment, .hljs-quote, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-symbol, .hljs-title {
+    color: #abb2bf;
+    font-style: normal;
+}
+
+.digital {
+    font-family: "anonymous-pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: $blk;
+}
+
+.social {
+    font-size: 2rem;
+    text-decoration: none;
+
+    svg {
+        font-size: 3rem;
+    }
+}
